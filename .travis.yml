@@ -1,18 +1,9 @@
 language: node_js
 node_js:
-  - '13.11.0'
+- node
 cache:
   directories:
     - node_modules
-after_install:
-  - node scripts/install-nested-dir.js 
-after_success:
-  - yarn test
-deploy:
-  - provider: script
-    script: 
+script: 
     - npm install -g serverless
     - sls deploy
-    skip_cleanup: true
-    on:
-      branch: master
