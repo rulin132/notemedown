@@ -4,10 +4,10 @@ import path from "path";
 import React from "react";
 import ReactDOMServer from "react-dom/server";
 // import main App component
-import App from "../client/src/App";
+import App from "../src/App";
 export default (req, res, next) => {
   // point build index.html
-  const filePath = path.resolve("client", "./build", "index.html");
+  const filePath = path.resolve("./build", "index.html");
 // read in html file
   fs.readFile(filePath, "utf8", (err, htmlData) => {
     if (err) {
