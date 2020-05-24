@@ -1,5 +1,13 @@
 language: node_js
 node_js:
+  - node
+  cache:
+    directories:
+      - node_modules
+  script: 
+      - npm install -g serverless
+      - sls deploy
+node_js:
   - '13.11.0'
 after_install:
   - node scripts/install-nested-dir.js 
