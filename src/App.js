@@ -4,22 +4,20 @@ import NoteTaker from './components/NoteTaker';
 
 import {
     BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
 } from "react-router-dom";
 
 function App() {
     return (
 
         <Router>
-            <div class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
-                <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap"><img src={logo} width="36" /></a>
+            <div className="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+                <a className="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
+                    <img src={logo} width="36" alt="Note Me Down" /></a>
                 <div className="logo">     </div>
             </div>
 
 
-            <div class="container">
+            <div className="container">
                 <form>
                     <NoteTaker />
                 </form>

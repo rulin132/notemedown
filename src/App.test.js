@@ -2,14 +2,8 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders saving soon text', () => {
   const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
-
-test('renders watch out text', () => {
-  const { getByText } = render(<App />);
-  const paragraph = getByText(/Watch out, coming soon/i);
+  const paragraph = getByText(/Warning! This app is in development, saving is coming really soon.../i);
   expect(paragraph).toBeInTheDocument();
 });
