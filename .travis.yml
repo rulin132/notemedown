@@ -13,6 +13,6 @@ deploy:
     script: npm install -g serverless &&
         yarn build &&
         sls deploy
-    cleanup: false
+    skip_cleanup: true
     on:
       branch: master
