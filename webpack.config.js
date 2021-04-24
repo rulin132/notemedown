@@ -59,5 +59,15 @@ module.exports = {
        { patterns: [{ from: "build", to: "build" }]}, {
       debug: "info"
     })
-  ]
+  ],
+  presets: [
+    [
+      '@babel/preset-env',
+      {
+        targets: {
+          esmodules: true,
+        },
+      },
+    ],
+  ],
 };
