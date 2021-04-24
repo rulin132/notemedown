@@ -24,7 +24,7 @@ module.exports = {
         loader: "babel-loader",
         include: __dirname,
         exclude: /node_modules/,
-        
+
         query: {
           presets: ["@babel/preset-env", "@babel/preset-react"],
           plugins: ["css-modules-transform", "transform-es2015-modules-commonjs"]
@@ -54,12 +54,6 @@ module.exports = {
       }
     ]
   },
-  plugins: [
-    new CopyWebpackPlugin(
-       { patterns: [{ from: "build", to: "build" }]}, {
-      debug: "info"
-    })
-  ],
   presets: [
     [
       '@babel/preset-env',
